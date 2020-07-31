@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-repl-wiki",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Semo plugin to provide ability to get wiki in REPL",
   "keywords": [
     "semo",
