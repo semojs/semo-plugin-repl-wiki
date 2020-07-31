@@ -12,8 +12,8 @@ semo repl --hook
 
 ## Thanks and roadmap
 
-The first wiki I choose is Baidu Baike, and I will integrate more wikis later.
+The first wiki I choose is Baidu Baike, thanks the awesome China Wiki like platform, and I will integrate more wikis later.
 
-## License
+## Licence
 
 MIT
