@@ -18,7 +18,9 @@ export const getWikiLink = async (word: string) => {
 
 export const getWiki = async (word: string) => {
   let link = await getWikiLink(word)
-  link = link.replace('http', 'https')
+  if (link && link.indexOf('https') !== 0) {
+    link = link.replace('http', 'https')
+  }
 
   try {
     const response = await got.get(link, {
