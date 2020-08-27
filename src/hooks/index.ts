@@ -16,11 +16,16 @@ export = (Utils) => {
               this.clearBufferedCommand()
 
               let wiki = await baidu.getWiki(words)
-              const regexp = new RegExp(`(${words})`, 'ig')
-              wiki = wiki.replace(regexp, (match, p1) => {
-                return Utils.chalk.green(p1)
-              })
-              console.log(Utils.chalk.cyan(wiki))
+              if (wiki) {
+                const regexp = new RegExp(`(${words})`, 'ig')
+                wiki = wiki.replace(regexp, (match, p1) => {
+                  return Utils.chalk.green(p1)
+                })
+                Utils.consoleReader(Utils.chalk.cyan(wiki), {
+                  plugin: 'semo-plugin-repl-wiki',
+                  identifier: input
+                })
+              }
               
               // @ts-ignore
               this.displayPrompt()
